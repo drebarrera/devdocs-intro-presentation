@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: clip;
+
+}
+
+main {
+  background-color: #222;
+}
+
+#overlay {
+  border: 10px solid black;
+}
+
+#overlay1 {
+  background-color: #0BFFA6;
+  mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  -webkit-mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  animation: overlay1BG 5s linear infinite;
+  opacity: 0.5;
+}
+
+#overlay2 {
+  background-color: #FF8C00;
+  mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  -webkit-mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  animation: overlay2BG 5s linear infinite;
+  opacity: 0.5;
+}
+
+#overlay3 {
+  background-color: #FF0000;
+  mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: radial-gradient(circle, black 0%, black 0%, transparent 70%);
+  -webkit-mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  animation: overlay3BG 5s linear infinite;
+  opacity: 0.5;
+}
+
+#content {
+  background: radial-gradient(rgba(30, 30, 30, 0) 0%, rgba(0, 0, 0, 1) 90%);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes overlay1BG {
+  0% {
+    background-color: #0BFFA6;
+  }
+  33.33% {
+    background-color: #FF8C00;
+  }
+  66.66% {
+    background-color: #FF0000;
+  }
+  100% {
+    background-color: #0BFFA6;
+  }
+}
+
+@keyframes overlay2BG {
+  0% {
+    background-color: #FF8C00;
+  }
+  33.33% {
+    background-color: #FF0000;
+  }
+  66.66% {
+    background-color: #0BFFA6;
+  }
+  100% {
+    background-color: #FF8C00;
+  }
+}
+
+@keyframes overlay3BG {
+  0% {
+    background-color: #FF0000;
+  }
+  33.33% {
+    background-color: #0BFFA6;
+  }
+  66.66% {
+    background-color: #FF8C00;
+  }
+  100% {
+    background-color: #FF0000;
+  }
+}
+
+p {
+  transition: opacity 400ms linear, visibility 400ms linear;
+}
+
+#profile {
+  transition: padding 200ms linear, border-radius 200ms linear;
+}
+
+#profileBox {
+  transition: margin-bottom 200ms linear, width 1s linear, height 1s linear, transform 100ms linear, margin-left 500ms;
+}
+
+#profileBox:hover {
+  margin: 10px;
+  transform: scale(var(--magnification));
+}
+
+#profile:hover {
+  padding: 10px;
+}
+
+.profileHover {
+  animation: profileHover 5s linear infinite;
+}
+
+@keyframes profileHover {
+  0%, 100% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: none;
+  }
+}
