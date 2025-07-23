@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, /*useRef,*/ useState } from "react";
 import "./index.css";
 import "./assets/fonts/fonts.css";
 import Introduction from "./components/introduction/Introduction";
@@ -8,7 +8,7 @@ import TechStack from "./components/introduction/TechStack";
 import AboutMe from "./components/introduction/AboutMe";
 import Strengths from "./components/introduction/Strengths";
 import LearningGoals from "./components/introduction/LearningGoals";
-import SwiftSend from "./components/swiftsend/SwiftSend";
+/*import SwiftSend from "./components/swiftsend/SwiftSend";
 import SwiftSendPurpose from "./components/swiftsend/SwiftSendPurpose";
 import OdinDashboard from "./components/swiftsend/OdinDashboard";
 import SwiftSendTechStack from "./components/swiftsend/SwiftSendTechStack";
@@ -24,10 +24,10 @@ import Ratatoskr from "./components/swiftsend/Ratatoskr";
 import Frontend from "./components/swiftsend/Frontend";
 import Improvements from "./components/swiftsend/Improvements";
 import LessonsLearned from "./components/swiftsend/LessonsLearned";
-import Deployment from "./components/swiftsend/Deployment";
+import Deployment from "./components/swiftsend/Deployment";*/
 
 function App() {
-  const progressBar = useRef(null);
+  //const progressBar = useRef(null);
   const [magnification, setMagnification] = useState<number>(1.1);
   const [page, setPage] = useState<number>(0);
   const [lightbox, setLightbox] = useState<LightboxType>({} as LightboxType);
