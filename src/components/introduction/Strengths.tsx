@@ -2,6 +2,7 @@ import { useState, type Dispatch, type SetStateAction } from "react";
 import TypewriterDiv from "../TypewriterDiv";
 import type { LightboxType } from "../Lightbox";
 import SMTypewriterDiv from "../SMTypewriterDiv";
+import SMTypewriterText from "../SMTypewriterText";
 
 export default function Strengths({setPage, setLightbox}: { setPage: Dispatch<SetStateAction<number>>, setLightbox: Dispatch<SetStateAction<LightboxType>> }) {
   const [slide, setSlide] = useState<number>(1);
@@ -32,22 +33,10 @@ export default function Strengths({setPage, setLightbox}: { setPage: Dispatch<Se
           {node: "", className: "text-lg md:text-xl"}
         ]}/>
         <div className="flex flex-col gap-[5px]">
-         <SMTypewriterDiv className="flex flex-row gap-[8px]" show={slide == 2} step={50} onFinish={() => nextSlide()} content={[
-            {node: "Ideation & Product Vision:", className: "text-lg md:text-lg font-medium"},
-            {node: "✦✦✦✦✦", className: "text-lg md:text-lg hover:underline"}
-          ]}/>
-          <SMTypewriterDiv className="flex flex-row gap-[8px]" show={slide == 3} step={50} onFinish={() => nextSlide()} content={[
-            {node: "Communication:", className: "text-lg md:text-lg font-medium"},
-            {node: "✦✦✦✦", className: "text-lg md:text-lg hover:underline"}
-          ]}/>
-          <SMTypewriterDiv className="flex flex-row gap-[8px]" show={slide == 4} step={50} onFinish={() => nextSlide()} content={[
-            {node: "Data Driven Results:", className: "text-lg md:text-lg font-medium"},
-            {node: "✦✦✦✦", className: "text-lg md:text-lg hover:underline"}
-          ]}/>
-          <SMTypewriterDiv className="flex flex-row gap-[8px]" show={slide == 5} step={50} onFinish={() => nextSlide()} content={[
-            {node: "Leadership:", className: "text-lg md:text-lg font-medium"},
-            {node: "✦✦✦", className: "text-lg md:text-lg hover:underline"}
-          ]}/>
+          <SMTypewriterText className="text-lg md:text-lg font-medium" show={slide == 2} step={50} onFinish={() => nextSlide()}>✦ Ideation & Product Vision</SMTypewriterText>
+          <SMTypewriterText className="text-lg md:text-lg font-medium" show={slide == 3} step={50} onFinish={() => nextSlide()}>✦ Communication</SMTypewriterText>
+          <SMTypewriterText className="text-lg md:text-lg font-medium" show={slide == 4} step={50} onFinish={() => nextSlide()}>✦ Generating Data-Driven Results</SMTypewriterText>
+          <SMTypewriterText className="text-lg md:text-lg font-medium" show={slide == 5} step={50} onFinish={() => nextSlide()}>✦ Leadership</SMTypewriterText>
         </div>
         <SMTypewriterDiv className="flex flex-col" show={slide == 6} step={50} onFinish={() => nextSlide()} content={[
           {node: "Commitment to Growth:", className: "text-lg md:text-xl font-medium"},

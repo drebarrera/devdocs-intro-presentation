@@ -41,13 +41,13 @@ export default function TechStack({setPage, setLightbox}: { setPage: Dispatch<Se
           })}}
         />
         <img id="profile" 
-          src="/images/swiftsend.webp" 
+          src="/images/sprouty_diagram.webp" 
           className={`w-[225px] h-full`} 
           onClick={() => {slide > 1 && setLightbox({
             show: true,
             title: "Systems Diagram of SwiftSend Email Client",
             content: <img
-              src="/images/swiftsend.webp" 
+              src="/images/sprouty_diagram.webp" 
               className={`w-full object-contain max-h-[700px]`}
             />,
             setLightbox: setLightbox

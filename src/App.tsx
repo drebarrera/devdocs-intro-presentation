@@ -31,7 +31,7 @@ function App() {
   const [magnification, setMagnification] = useState<number>(1.1);
   const [page, setPage] = useState<number>(0);
   const [lightbox, setLightbox] = useState<LightboxType>({} as LightboxType);
-  const [slideSet, setSlideSet] = useState<number>(1);
+  const [slideSet, setSlideSet] = useState<number>(0);
   const [slideChangeTimeout, setSlideChangeTimeout] = useState<boolean>(false);
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -75,7 +75,7 @@ function App() {
       <div id="overlay2" className="fixed h-full aspect-square ml-[50%] z-[2] translate-x-[-50%]"/>
       <div id="overlay3" className="fixed h-full aspect-square ml-[75%] z-[3] translate-x-[-50%]"/>
       <div id="content" className="absolute w-screen h-screen z-[4]"></div>
-      <div className="absolute w-screen h-screen flex flex-col justify-center items-center p-[15px] overflow-clip pointer-events-none" style={{ zIndex: slideSet == 1 ? 6 : 5 }}>
+      {/*<div className="absolute w-screen h-screen flex flex-col justify-center items-center p-[15px] overflow-clip pointer-events-none" style={{ zIndex: slideSet == 1 ? 6 : 5 }}>
         <div className="w-full h-full flex flex-row justify-center items-center overflow-clip">
           <div className="w-full h-full max-h-[100vh] flex flex-col justify-center items-center gap-[10px] overflow-clip" style={{ opacity: 1 }}>
             {page >= 1 && slideSet == 1 && <div className="hidden md:flex w-full max-w-[800px] h-fit p-[20px] flex-row justify-center items-center gap-[10px]">
@@ -108,7 +108,7 @@ function App() {
           </div>
         </div>
         <Lightbox show={lightbox?.show ?? false} title={lightbox?.title} content={lightbox?.content} setLightbox={setLightbox}/>
-      </div>
+      </div>*/}
       <div className="absolute w-screen h-screen z-[6] flex flex-col justify-center items-center p-[15px] overflow-clip pointer-events-none" style={{ zIndex: slideSet == 0 ? 6 : 5 }}>
         <div className="w-full h-full flex flex-row justify-center items-center overflow-clip">
           <div className="w-full h-full flex flex-col justify-center items-center gap-[10px] overflow-clip" style={{ opacity: 1 }}>

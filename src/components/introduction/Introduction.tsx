@@ -64,7 +64,7 @@ export default function Introduction({setPage, setLightbox, slideSet, changeSlid
             {node: "B.S. Computer Engineering", className: "text-base md:text-lg"}
           ]}/>
         </div>
-        <TypewriterText className="flex flex-row gap-[8px]" trigger={slide == 7} step={50} onFinish={() => nextSlide()}>I help scaling startups turn complex product visions into reliable, user-centered software.</TypewriterText>
+        <TypewriterText className="flex flex-row gap-[8px]" trigger={slide == 7} step={50} onFinish={() => nextSlide()}>I'm a Software and Product Engineer located in Austin specializing in system architecture, web and mobile design, and AI integration.</TypewriterText>
         <TypewriterDiv className="flex flex-row gap-[8px]" trigger={slide == 8} step={50} onFinish={() => nextSlide()} content={[
           {node: "Portfolio:", className: "text-base md:text-lg font-medium"},
           {node: "www.drebarrera.com", className: "text-base md:text-lg hover:underline", onClick: () => {
