@@ -45,7 +45,7 @@ export default function TechStack({setPage, setLightbox}: { setPage: Dispatch<Se
           className={`w-[225px] h-full`} 
           onClick={() => {slide > 1 && setLightbox({
             show: true,
-            title: "Systems Diagram of SwiftSend Email Client",
+            title: "Systems Diagram of Sprouty Vector Data Manager",
             content: <img
               src="/images/sprouty_diagram.webp" 
               className={`w-full object-contain max-h-[700px]`}
